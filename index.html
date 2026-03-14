@@ -26,15 +26,8 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'Source Sans 3', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; }
 
-/* HERO — nav is part of hero */
 .hero { min-height: 100vh; display: flex; flex-direction: column; background: var(--black); overflow: hidden; position: relative; }
-
-nav {
-  position: relative; z-index: 10; flex-shrink: 0;
-  background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1);
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 56px; height: 72px;
-}
+nav { position: relative; z-index: 10; flex-shrink: 0; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 72px; }
 .nav-logo { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.6rem; letter-spacing: 0.04em; color: var(--white); }
 .nav-logo em { font-style: normal; color: var(--yellow); }
 .nav-links { display: flex; gap: 36px; align-items: center; }
@@ -42,30 +35,23 @@ nav {
 .nav-links a:hover { color: var(--white); }
 .nav-cta-btn { background: var(--yellow) !important; color: var(--black) !important; padding: 9px 22px !important; border: 2px solid var(--yellow) !important; transition: all 0.2s !important; }
 .nav-cta-btn:hover { background: var(--white) !important; border-color: var(--white) !important; }
-
 .hero-body { flex: 1; display: flex; align-items: stretch; }
 .hero-left { flex: 0 0 52%; display: flex; flex-direction: column; justify-content: flex-end; padding: 56px 64px 80px; position: relative; z-index: 2; }
 .hero-left::after { content: ''; position: absolute; top: 0; right: -48px; bottom: 0; width: 96px; background: var(--black); clip-path: polygon(0 0, 48px 0, 96px 100%, 48px 100%); z-index: 3; }
 .hero-right { flex: 1; position: relative; overflow: hidden; }
 .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; background: url('borito.jpeg') center/cover no-repeat; }
 .hero-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--black) 0%, transparent 45%); }
-
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 28px; animation: fu 0.9s ease both; }
 .ey-line { width: 32px; height: 2px; background: var(--yellow); }
 .ey-text { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--yellow); }
-
 .hero h1 { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(4rem, 7vw, 7.5rem); line-height: 0.9; text-transform: uppercase; letter-spacing: -1px; color: var(--white); margin-bottom: 30px; animation: fu 0.9s 0.1s ease both; }
 .hero h1 .acc { color: var(--yellow); display: block; }
-
 .hero-desc { font-size: 1.05rem; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.55); max-width: 440px; margin-bottom: 44px; animation: fu 0.9s 0.2s ease both; }
-
 .hero-stats { display: flex; gap: 40px; margin-bottom: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.12); animation: fu 0.9s 0.3s ease both; }
 .hs-num { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 2.8rem; color: var(--yellow); line-height: 1; }
 .hs-u { font-size: 1.4rem; }
 .hs-lbl { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-top: 5px; }
-
 .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; animation: fu 0.9s 0.4s ease both; }
-
 @keyframes fu { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
 
 .btn-y { display: inline-block; text-decoration: none; background: var(--yellow); color: var(--black); font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 32px; border: 2px solid var(--yellow); cursor: pointer; transition: all 0.2s; }
@@ -75,7 +61,6 @@ nav {
 .btn-dk { display: inline-block; text-decoration: none; background: var(--black); color: var(--white); font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 32px; border: 2px solid var(--black); cursor: pointer; transition: all 0.2s; }
 .btn-dk:hover { background: var(--charcoal); border-color: var(--charcoal); }
 
-/* FEATURE BAR */
 .fbar { background: var(--yellow); display: grid; grid-template-columns: repeat(4, 1fr); }
 .fbar-item { padding: 26px 28px; border-right: 1.5px solid rgba(17,17,16,0.15); display: flex; align-items: center; gap: 14px; }
 .fbar-item:last-child { border-right: none; }
@@ -84,43 +69,43 @@ nav {
 .fbar-t { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.05em; color: var(--black); text-transform: uppercase; }
 .fbar-s { font-size: 0.76rem; color: rgba(17,17,16,0.6); margin-top: 2px; }
 
-/* SECTIONS */
 .lbl { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--yellow-dark); margin-bottom: 14px; }
 .sh { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: clamp(2.4rem, 4vw, 3.8rem); text-transform: uppercase; line-height: 0.95; letter-spacing: -0.5px; color: var(--black); }
 .sh em { font-style: normal; color: var(--yellow-dark); }
 
-/* INTRO */
+.vid-sec { background: var(--charcoal); padding: 100px 64px; }
+.vid-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 52px; }
+.vid-hdr .lbl { color: var(--yellow); }
+.vid-hdr .sh { color: var(--white); }
+.vid-hdr p { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.45); }
+.vframe { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 2px solid rgba(255,255,255,0.15); }
+.vframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
 .intro { background: var(--sand); padding: 100px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
 .intro p { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-top: 20px; }
-
 .demo-box { background: var(--charcoal); padding: 40px 44px; border-left: 5px solid var(--yellow); position: relative; }
 .demo-box::before { content: 'DEMO KÖRUTUNK'; position: absolute; top: -13px; left: 44px; background: var(--yellow); color: var(--black); font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.2em; padding: 3px 12px; }
 .demo-box p { font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.75); margin-bottom: 28px; }
 .demo-box strong { color: var(--yellow); font-weight: 600; }
 
-/* MODELS */
 .models { background: var(--charcoal); padding: 80px 0 60px; border-top: 3px solid rgba(245,200,0,0.15); }
 .models-top { padding: 0 64px; margin-bottom: 56px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
 .models-top .lbl { color: var(--yellow); }
 .models-top .sh { color: var(--white); }
 .models-top p { max-width: 340px; color: rgba(255,255,255,0.45); font-size: 0.95rem; line-height: 1.7; }
 .mgrid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 2.5px solid rgba(255,255,255,0.12); gap: 1px; background: rgba(255,255,255,0.08); }
-
 .mcard { background: var(--charcoal); position: relative; transition: background 0.3s; display: flex; flex-direction: column; }
 .mcard:hover { background: #232320; }
 .mcard.feat { background: var(--yellow); }
 .mcard.feat:hover { background: #f0c200; }
-
 .mimg { width: 100%; height: 240px; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #1A1A18; }
 .mimg img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.5s ease; display: block; }
 .mcard:hover .mimg img { transform: scale(1.04); }
-.mcard.feat .mimg { background: #0F0F0E; } .mcard.feat .mimg img { filter: none; }
-
+.mcard.feat .mimg { background: #0F0F0E; }
+.mcard.feat .mimg img { filter: none; }
 .mcontent { padding: 36px 40px 44px; flex: 1; display: flex; flex-direction: column; }
-
 .mnew { display: inline-block; background: var(--yellow); color: var(--black); font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 0.62rem; letter-spacing: 0.18em; padding: 3px 10px; margin-bottom: 16px; align-self: flex-start; }
 .mcard.feat .mnew { background: var(--black); color: var(--yellow); }
-
 .mname { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.6rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); line-height: 1; }
 .mcard.feat .mname { color: var(--black); }
 .msub { font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-top: 4px; margin-bottom: 0; }
@@ -135,16 +120,6 @@ nav {
 .mspecs li strong { color: var(--yellow); font-weight: 600; }
 .mcard.feat .mspecs li strong { color: var(--black); font-weight: 700; }
 
-/* VIDEO */
-.vid-sec { background: var(--charcoal); padding: 100px 64px; }
-.vid-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 52px; }
-.vid-hdr .lbl { color: var(--yellow); }
-.vid-hdr .sh { color: var(--white); }
-.vid-hdr p { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.45); }
-.vframe { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 2px solid rgba(255,255,255,0.15); }
-.vframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-
-/* FORM */
 .form-sec { background: var(--white); padding: 100px 64px; }
 .form-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; max-width: 1200px; margin: 0 auto; align-items: start; }
 .form-left .sh { margin-bottom: 4px; }
@@ -153,6 +128,12 @@ nav {
 .plist { list-style: none; }
 .plist li { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
 .plist li::before { content: '✓'; font-weight: 700; color: var(--yellow-dark); flex-shrink: 0; font-size: 0.82rem; margin-top: 1px; }
+
+.contact-phone { display: flex; align-items: center; gap: 14px; margin-top: 32px; padding: 20px 24px; background: var(--black); border-left: 4px solid var(--yellow); }
+.contact-phone svg { width: 22px; height: 22px; flex-shrink: 0; }
+.contact-phone-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+.contact-phone-num { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--yellow); letter-spacing: 0.04em; text-decoration: none; display: block; }
+.contact-phone-num:hover { color: var(--white); }
 
 .fbox { background: var(--sand); border: 2px solid var(--black); padding: 44px 40px; position: relative; }
 .fbox::before { content: ''; position: absolute; top: -3px; left: 0; right: 0; height: 5px; background: var(--yellow); }
@@ -205,13 +186,14 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
 </head>
 <body>
 
+<!-- 1. HERO -->
 <section class="hero">
 <nav>
   <div class="nav-logo">CHEMICAL-<em>SEED</em></div>
   <div class="nav-links">
-    <a href="#modellek">Modellek</a>
     <a href="#video">Videó</a>
     <a href="#demo">Demo</a>
+    <a href="#modellek">Modellek</a>
     <a href="#form" class="nav-cta-btn">Jelentkezem</a>
   </div>
 </nav>
@@ -234,6 +216,7 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
 </div>
 </section>
 
+<!-- 2. FEATURE BAR -->
 <div class="fbar">
   <div class="fbar-item">
     <div class="fbar-ico"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#111110" stroke-width="1.4"/><path d="M8 4v4l3 2" stroke="#111110" stroke-width="1.4" stroke-linecap="round"/></svg></div>
@@ -253,6 +236,21 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
   </div>
 </div>
 
+<!-- 3. VIDEÓ -->
+<section class="vid-sec" id="video">
+  <div class="vid-hdr reveal">
+    <div>
+      <div class="lbl">Lásd Akcióban</div>
+      <div class="sh" style="color:var(--white)">A FASTRAC<br><em style="color:var(--yellow)">valóságban</em></div>
+    </div>
+    <p>Nézd meg, hogyan teljesít a JCB FASTRAC valódi körülmények között – a mezőn és az úton egyaránt. A sebesség, a stabilitás és a komfort minden felvételen megmutatkozik.</p>
+  </div>
+  <div class="vframe reveal">
+    <iframe src="https://www.youtube.com/embed/1c4wAjKlcas?rel=0" allowfullscreen loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- 4. INTRO / DEMO -->
 <section class="intro" id="demo">
   <div class="reveal">
     <div class="lbl">A FASTRAC Különlegessége</div>
@@ -267,6 +265,7 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
   </div>
 </section>
 
+<!-- 5. MODELLEK -->
 <section class="models" id="modellek">
   <div class="models-top reveal">
     <div>
@@ -334,19 +333,7 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
   </div>
 </section>
 
-<section class="vid-sec" id="video">
-  <div class="vid-hdr reveal">
-    <div>
-      <div class="lbl">Lásd Akcióban</div>
-      <div class="sh" style="color:var(--white)">A FASTRAC<br><em style="color:var(--yellow)">valóságban</em></div>
-    </div>
-    <p>Nézd meg, hogyan teljesít a JCB FASTRAC valódi körülmények között – a mezőn és az úton egyaránt. A sebesség, a stabilitás és a komfort minden felvételen megmutatkozik.</p>
-  </div>
-  <div class="vframe reveal">
-    <iframe src="https://www.youtube.com/embed/1c4wAjKlcas?rel=0" allowfullscreen loading="lazy"></iframe>
-  </div>
-</section>
-
+<!-- 6. ŰRLAP -->
 <section class="form-sec" id="form">
   <div class="form-layout">
     <div class="form-left reveal">
@@ -360,6 +347,15 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
         <li>Kötelezettségmentes – semmilyen vásárlási kötelezettséggel nem jár</li>
         <li>Korlátozott helyek – érdemes időben jelentkezni</li>
       </ul>
+      <div class="contact-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#F5C800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        <div>
+          <div class="contact-phone-label">Hívj minket közvetlenül</div>
+          <a href="tel:+36306990624" class="contact-phone-num">+36 30 699 0624</a>
+        </div>
+      </div>
     </div>
     <div class="fbox reveal">
       <form onsubmit="doSub(event)">
@@ -367,6 +363,10 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
         <div class="frow">
           <div class="fg"><label>Név *</label><input type="text" placeholder="Kovács János" required></div>
           <div class="fg"><label>Cégnév</label><input type="text" placeholder="Gazdaság neve"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Telefonszám</label><input type="tel" placeholder="+36 30 123 4567"></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="pelda@email.hu"></div>
         </div>
         <div class="frow">
           <div class="fg"><label>Irányítószám</label><input type="text" placeholder="1234"></div>
@@ -381,7 +381,7 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
         <div class="ftitle">Gazdaság részletei</div>
         <div class="frow">
           <div class="fg"><label>Gazdaság típusa</label><select><option value="">Válassz...</option><option>Növénytermesztés</option><option>Állattenyésztés</option><option>Vegyes gazdaság</option></select></div>
-          <div class="fg"><label>Beruházás esedékessége</label><select><option value="">Válassz...<option>2026-ban</option><option>Még nem döntöttem</option></select></div>
+          <div class="fg"><label>Beruházás esedékessége</label><select><option value="">Válassz...</option><option>2026-ban</option><option>Még nem döntöttem</option></select></div>
         </div>
         <div class="fg"><label>Művelt terület nagysága</label><select><option value="">Válassz...</option><option>100 ha alatt</option><option>100–300 ha</option><option>300–600 ha</option><option>600 ha felett</option></select></div>
         <div class="ftitle">Mikor szeretnéd kipróbálni?</div>
