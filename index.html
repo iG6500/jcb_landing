@@ -149,9 +149,6 @@ nav { position: relative; z-index: 10; flex-shrink: 0; background: transparent; 
 .chk { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); padding: 10px 13px; cursor: pointer; font-size: 0.88rem; color: var(--text); transition: border-color 0.2s; }
 .chk:hover { border-color: var(--yellow-dark); }
 .chk input { accent-color: var(--yellow-dark); width: 14px; height: 14px; }
-.mgrid2 { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; }
-.mb { background: var(--white); border: 1.5px solid var(--border); color: var(--text-muted); font-family: 'Source Sans 3', sans-serif; font-size: 0.82rem; font-weight: 500; padding: 9px 4px; cursor: pointer; text-align: center; transition: all 0.15s; }
-.mb:hover, .mb.on { background: var(--yellow); border-color: var(--yellow-dark); color: var(--black); font-weight: 600; }
 .fsub { width: 100%; background: var(--black); color: var(--white); font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 17px; border: 2px solid var(--black); cursor: pointer; margin-top: 24px; transition: all 0.2s; }
 .fsub:hover { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
 
@@ -384,15 +381,6 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
           <div class="fg"><label>Beruházás esedékessége</label><select><option value="">Válassz...</option><option>2026-ban</option><option>Még nem döntöttem</option></select></div>
         </div>
         <div class="fg"><label>Művelt terület nagysága</label><select><option value="">Válassz...</option><option>100 ha alatt</option><option>100–300 ha</option><option>300–600 ha</option><option>600 ha felett</option></select></div>
-        <div class="ftitle">Mikor szeretnéd kipróbálni?</div>
-        <div class="mgrid2">
-          <div class="mb" onclick="this.classList.toggle('on')">Április</div>
-          <div class="mb" onclick="this.classList.toggle('on')">Május</div>
-          <div class="mb" onclick="this.classList.toggle('on')">Június</div>
-          <div class="mb" onclick="this.classList.toggle('on')">Augusztus</div>
-          <div class="mb" onclick="this.classList.toggle('on')">Szeptember</div>
-          <div class="mb" onclick="this.classList.toggle('on')">Október</div>
-        </div>
         <button type="submit" class="fsub">Jelentkezem a FASTRAC Demóra →</button>
       </form>
     </div>
