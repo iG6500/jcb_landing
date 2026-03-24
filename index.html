@@ -6,6 +6,7 @@
 <title>JCB FASTRAC – A Világ Leggyorsabb Traktora</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
 <style>
 :root {
   --yellow: #F5C800;
@@ -120,6 +121,7 @@ nav { position: relative; z-index: 10; flex-shrink: 0; background: transparent; 
 .mspecs li strong { color: var(--yellow); font-weight: 600; }
 .mcard.feat .mspecs li strong { color: var(--black); font-weight: 700; }
 
+/* ===== FORM SECTION ===== */
 .form-sec { background: var(--white); padding: 100px 64px; }
 .form-layout { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; max-width: 1200px; margin: 0 auto; align-items: start; }
 .form-left .sh { margin-bottom: 4px; }
@@ -135,22 +137,198 @@ nav { position: relative; z-index: 10; flex-shrink: 0; background: transparent; 
 .contact-phone-num { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1.3rem; color: var(--yellow); letter-spacing: 0.04em; text-decoration: none; display: block; }
 .contact-phone-num:hover { color: var(--white); }
 
-.fbox { background: var(--sand); border: 2px solid var(--black); padding: 44px 40px; position: relative; }
-.fbox::before { content: ''; position: absolute; top: -3px; left: 0; right: 0; height: 5px; background: var(--yellow); }
-.ftitle { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin: 22px 0 9px; }
-.ftitle:first-child { margin-top: 0; }
-.fg { margin-bottom: 12px; }
-.fg label { display: block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
-.fg input, .fg select { width: 100%; background: var(--white); border: 1.5px solid var(--border); color: var(--text); font-family: 'Source Sans 3', sans-serif; font-size: 0.93rem; padding: 10px 13px; outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
-.fg input:focus, .fg select:focus { border-color: var(--black); }
-.fg select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236B6860'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 13px center; cursor: pointer; }
-.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.chk-grid { display: flex; flex-direction: column; gap: 5px; }
-.chk { display: flex; align-items: center; gap: 10px; background: var(--white); border: 1.5px solid var(--border); padding: 10px 13px; cursor: pointer; font-size: 0.88rem; color: var(--text); transition: border-color 0.2s; }
-.chk:hover { border-color: var(--yellow-dark); }
-.chk input { accent-color: var(--yellow-dark); width: 14px; height: 14px; }
-.fsub { width: 100%; background: var(--black); color: var(--white); font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 17px; border: 2px solid var(--black); cursor: pointer; margin-top: 24px; transition: all 0.2s; }
-.fsub:hover { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
+/* Mailchimp form – override styles to match site design */
+.fbox {
+  background: var(--sand);
+  border: 2px solid var(--black);
+  padding: 44px 40px;
+  position: relative;
+}
+.fbox::before {
+  content: '';
+  position: absolute;
+  top: -3px; left: 0; right: 0;
+  height: 5px;
+  background: var(--yellow);
+}
+
+/* Reset Mailchimp default styles */
+#mc_embed_signup {
+  background: transparent !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+  width: 100% !important;
+  clear: left;
+}
+#mc_embed_signup h2 { display: none; }
+#mc_embed_signup .indicates-required { display: none; }
+
+#mc_embed_signup .mc-field-group {
+  width: 100% !important;
+  padding-bottom: 10px !important;
+  min-height: unset !important;
+}
+#mc_embed_signup .mc-field-group label {
+  display: block;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 5px !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+}
+#mc_embed_signup .mc-field-group input[type="text"],
+#mc_embed_signup .mc-field-group input[type="email"],
+#mc_embed_signup .mc-field-group input[type="tel"] {
+  width: 100% !important;
+  background: var(--white) !important;
+  border: 1.5px solid var(--border) !important;
+  border-radius: 0 !important;
+  color: var(--text) !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+  font-size: 0.93rem !important;
+  padding: 10px 13px !important;
+  outline: none !important;
+  transition: border-color 0.2s !important;
+  box-shadow: none !important;
+  height: auto !important;
+}
+#mc_embed_signup .mc-field-group input[type="text"]:focus,
+#mc_embed_signup .mc-field-group input[type="email"]:focus,
+#mc_embed_signup .mc-field-group input[type="tel"]:focus {
+  border-color: var(--black) !important;
+}
+#mc_embed_signup .mc-field-group select {
+  width: 100% !important;
+  background: var(--white) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236B6860'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 13px center !important;
+  border: 1.5px solid var(--border) !important;
+  border-radius: 0 !important;
+  color: var(--text) !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+  font-size: 0.93rem !important;
+  padding: 10px 13px !important;
+  outline: none !important;
+  transition: border-color 0.2s !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  height: auto !important;
+  box-shadow: none !important;
+}
+#mc_embed_signup .mc-field-group select:focus {
+  border-color: var(--black) !important;
+}
+
+/* GDPR radio */
+#mc_embed_signup .mc-field-group.input-group strong {
+  display: block;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--text-muted) !important;
+  margin-bottom: 5px !important;
+  font-family: 'Source Sans 3', sans-serif !important;
+}
+#mc_embed_signup .mc-field-group.input-group ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#mc_embed_signup .mc-field-group.input-group ul li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: var(--white) !important;
+  border: 1.5px solid var(--border) !important;
+  padding: 10px 13px !important;
+  cursor: pointer !important;
+  font-size: 0.88rem !important;
+  color: var(--text) !important;
+  margin: 0 !important;
+}
+#mc_embed_signup .mc-field-group.input-group ul li label {
+  font-size: 0.88rem !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  color: var(--text) !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+}
+#mc_embed_signup .mc-field-group.input-group input[type="radio"] {
+  accent-color: var(--yellow-dark) !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Section dividers inside the form */
+.mc-section-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 22px 0 9px;
+  display: block;
+}
+
+/* Two-column grid for pairs */
+.mc-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.mc-field-row .mc-field-group {
+  padding-bottom: 0 !important;
+}
+
+/* Submit button */
+#mc_embed_signup #mc-embedded-subscribe {
+  width: 100% !important;
+  background: var(--black) !important;
+  color: var(--white) !important;
+  font-family: 'Oswald', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 17px !important;
+  border: 2px solid var(--black) !important;
+  border-radius: 0 !important;
+  cursor: pointer !important;
+  margin-top: 24px !important;
+  transition: all 0.2s !important;
+  height: auto !important;
+  display: block !important;
+}
+#mc_embed_signup #mc-embedded-subscribe:hover {
+  background: var(--yellow) !important;
+  color: var(--black) !important;
+  border-color: var(--yellow) !important;
+}
+
+/* Success/error responses */
+#mc_embed_signup #mce-responses { clear: both; }
+#mc_embed_signup .response {
+  margin: 1em 0;
+  padding: 1em;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+#mc_embed_signup #mce-error-response {
+  background: #fff0f0;
+  border-left: 4px solid #cc0000;
+  color: #cc0000;
+}
+#mc_embed_signup #mce-success-response {
+  background: #f0fff4;
+  border-left: 4px solid #2d8c4e;
+  color: #2d8c4e;
+}
 
 footer { background: var(--black); padding: 34px 64px; display: flex; justify-content: space-between; align-items: center; border-top: 3px solid var(--yellow); flex-wrap: wrap; gap: 14px; }
 .fl { font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 1.4rem; color: var(--white); }
@@ -176,7 +354,7 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
   .vid-hdr { grid-template-columns: 1fr; gap: 32px; }
   .vid-sec, .form-sec { padding: 64px 24px; }
   .form-layout { grid-template-columns: 1fr; gap: 44px; }
-  .frow { grid-template-columns: 1fr; }
+  .mc-field-row { grid-template-columns: 1fr; }
   footer { padding: 24px; }
 }
 </style>
@@ -354,36 +532,131 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
         </div>
       </div>
     </div>
+
+    <!-- Mailchimp form with site styling -->
     <div class="fbox reveal">
-      <form onsubmit="doSub(event)">
-        <div class="ftitle">Személyes adatok</div>
-        <div class="frow">
-          <div class="fg"><label>Név *</label><input type="text" placeholder="Kovács János" required></div>
-          <div class="fg"><label>Cégnév *</label><input type="text" placeholder="Gazdaság neve"></div>
+      <div id="mc_embed_shell">
+        <div id="mc_embed_signup">
+          <form action="https://xtratech.us18.list-manage.com/subscribe/post?u=859ff0560bf14ca6c051f7f8e&amp;id=4774a6baa8&amp;f_id=0071abe6f0"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank">
+            <div id="mc_embed_signup_scroll">
+
+              <span class="mc-section-title">Személyes adatok</span>
+
+              <div class="mc-field-row">
+                <div class="mc-field-group">
+                  <label for="mce-LNAME">Vezetéknév</label>
+                  <input type="text" name="LNAME" class="text" id="mce-LNAME" value="" placeholder="Kovács">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-FNAME">Keresztnév</label>
+                  <input type="text" name="FNAME" class="text" id="mce-FNAME" value="" placeholder="János">
+                </div>
+              </div>
+
+              <div class="mc-field-group">
+                <label for="mce-MMERGE7">Cég</label>
+                <input type="text" name="MMERGE7" class="text" id="mce-MMERGE7" value="" placeholder="Gazdaság neve">
+              </div>
+
+              <div class="mc-field-row">
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">Email cím <span class="asterisk">*</span></label>
+                  <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="pelda@email.hu">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-PHONE">Telefonszám</label>
+                  <input type="text" name="PHONE" class="REQ_CSS" id="mce-PHONE" value="" placeholder="+36 30 123 4567">
+                </div>
+              </div>
+
+              <div class="mc-field-row">
+                <div class="mc-field-group">
+                  <label for="mce-MMERGE6">Irányítószám</label>
+                  <input type="text" name="MMERGE6" class="text" id="mce-MMERGE6" value="" placeholder="1234">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-MMERGE8">Település</label>
+                  <input type="text" name="MMERGE8" class="text" id="mce-MMERGE8" value="" placeholder="Budapest">
+                </div>
+              </div>
+
+              <span class="mc-section-title">Érdeklő modell</span>
+
+              <div class="mc-field-group">
+                <label for="mce-MMERGE17">Termék – Traktor</label>
+                <select name="MMERGE17" id="mce-MMERGE17">
+                  <option value="">Válassz...</option>
+                  <option value="FASTRAC 4000">FASTRAC 4000</option>
+                  <option value="FASTRAC 6000">FASTRAC 6000</option>
+                  <option value="FASTRAC 8000">FASTRAC 8000</option>
+                </select>
+              </div>
+
+              <span class="mc-section-title">Gazdaság részletei</span>
+
+              <div class="mc-field-group">
+                <label for="mce-MMERGE15">Gazdaság típusa</label>
+                <select name="MMERGE15" id="mce-MMERGE15">
+                  <option value="">Válassz...</option>
+                  <option value="Növénytermesztés">Növénytermesztés</option>
+                  <option value="Állattenyésztés">Állattenyésztés</option>
+                  <option value="Vegyes gazdaság">Vegyes gazdaság</option>
+                </select>
+              </div>
+
+              <div class="mc-field-row">
+                <div class="mc-field-group">
+                  <label for="mce-MMERGE13">Gazdaság mérete</label>
+                  <input type="text" name="MMERGE13" class="text" id="mce-MMERGE13" value="" placeholder="pl. 250 ha">
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-MMERGE16">Beruházás esedékessége</label>
+                  <input type="text" name="MMERGE16" class="text" id="mce-MMERGE16" value="" placeholder="pl. 2026 tavasz">
+                </div>
+              </div>
+
+              <span class="mc-section-title">Adatvédelem</span>
+
+              <div class="mc-field-group input-group">
+                <strong>GDPR elfogadása</strong>
+                <ul>
+                  <li>
+                    <input type="radio" name="MMERGE11" id="mce-MMERGE110" value="Igen">
+                    <label for="mce-MMERGE110">Igen, hozzájárulok az adataim kezeléséhez – <a href="https://xtratech.hu/adatvedelmi-tajekoztato" target="_blank" style="color:var(--yellow-dark);text-decoration:underline;font-weight:600;">Adatvédelmi tájékoztató</a></label>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Mailchimp hidden tag -->
+              <div hidden="">
+                <input type="hidden" name="tags" value="3055464">
+              </div>
+
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none;"></div>
+                <div class="response" id="mce-success-response" style="display:none;"></div>
+              </div>
+
+              <!-- Anti-bot honeypot -->
+              <div aria-hidden="true" style="position:absolute;left:-5000px;">
+                <input type="text" name="b_859ff0560bf14ca6c051f7f8e_4774a6baa8" tabindex="-1" value="">
+              </div>
+
+              <div class="clear">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Jelentkezem a FASTRAC Demóra →">
+              </div>
+
+            </div>
+          </form>
         </div>
-        <div class="frow">
-          <div class="fg"><label>Telefonszám *</label><input type="tel" placeholder="+36 30 123 4567"></div>
-          <div class="fg"><label>Email *</label><input type="email" placeholder="pelda@email.hu"></div>
-        </div>
-        <div class="frow">
-          <div class="fg"><label>Irányítószám</label><input type="text" placeholder="1234"></div>
-          <div class="fg"><label>Cím / Helység</label><input type="text" placeholder="Budapest"></div>
-        </div>
-        <div class="ftitle">Érdeklő modell</div>
-        <div class="chk-grid">
-          <label class="chk"><input type="checkbox" name="m" value="4000"> FASTRAC 4000 – Univerzális Erőgép</label>
-          <label class="chk"><input type="checkbox" name="m" value="6000"> FASTRAC 6000 – Prémium Technológia (ÚJ!)</label>
-          <label class="chk"><input type="checkbox" name="m" value="8000"> FASTRAC 8000 – Csúcsteljesítmény</label>
-        </div>
-        <div class="ftitle">Gazdaság részletei</div>
-        <div class="frow">
-          <div class="fg"><label>Gazdaság típusa</label><select><option value="">Válassz...</option><option>Növénytermesztés</option><option>Állattenyésztés</option><option>Vegyes gazdaság</option></select></div>
-          <div class="fg"><label>Beruházás esedékessége</label><select><option value="">Válassz...</option><option>2026-ban</option><option>Még nem döntöttem</option></select></div>
-        </div>
-        <div class="fg"><label>Művelt terület nagysága</label><select><option value="">Válassz...</option><option>100 ha alatt</option><option>100–300 ha</option><option>300–600 ha</option><option>600 ha felett</option></select></div>
-        <button type="submit" class="fsub">Jelentkezem a FASTRAC Demóra →</button>
-      </form>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -393,18 +666,36 @@ footer p { font-size: 0.76rem; color: rgba(255,255,255,0.3); }
   <p style="font-size:0.7rem;color:rgba(255,255,255,0.10);">A világ leggyorsabb traktora.</p>
 </footer>
 
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript">
+(function($) {
+  window.fnames = new Array(); window.ftypes = new Array();
+  fnames[2]='LNAME';ftypes[2]='text';
+  fnames[1]='FNAME';ftypes[1]='text';
+  fnames[7]='MMERGE7';ftypes[7]='text';
+  fnames[0]='EMAIL';ftypes[0]='email';
+  fnames[4]='PHONE';ftypes[4]='phone';
+  fnames[6]='MMERGE6';ftypes[6]='text';
+  fnames[8]='MMERGE8';ftypes[8]='text';
+  fnames[17]='MMERGE17';ftypes[17]='dropdown';
+  fnames[15]='MMERGE15';ftypes[15]='dropdown';
+  fnames[13]='MMERGE13';ftypes[13]='text';
+  fnames[16]='MMERGE16';ftypes[16]='text';
+  fnames[11]='MMERGE11';ftypes[11]='radio';
+  $.extend($.validator.messages, {
+    required: "Kötelező megadni.",
+    email: "Érvényes e-mail címnek kell lennie."
+  });
+}(jQuery));
+var $mcj = jQuery.noConflict(true);
+</script>
+
 <script>
   const obs = new IntersectionObserver(entries => {
     entries.forEach((e,i) => { if(e.isIntersecting) setTimeout(()=>e.target.classList.add('in'), i*60); });
   }, {threshold: 0.1});
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-  function doSub(e) {
-    e.preventDefault();
-    const b = e.target.querySelector('.fsub');
-    b.textContent = '✓ Sikeresen Elküldve – Hamarosan Felvesszük a Kapcsolatot!';
-    b.style.background = '#2d8c4e'; b.style.borderColor = '#2d8c4e'; b.disabled = true;
-  }
 </script>
+
 </body>
 </html>
